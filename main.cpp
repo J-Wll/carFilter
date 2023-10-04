@@ -53,13 +53,13 @@ int main() {
   // only have 6 cylinders
   // https://stackoverflow.com/questions/64681330/how-to-map-multiple-values-in-c
   
-  int makeNum = getInp("What is the make of the car? Please enter 1, 2, 3 or 4 for \n\n1) Ford\n2) Nisan\n3) Volvo\n4) Jaguar", makeValidate);
-  string carMake = getMake(makeNum);
-  char carChar = carMake[0];
-  int yearMade = getInp("What was the year of manufacture? Note that only models made between 1995 and 2015 are supported by this service\n\nPlease enter an integer between 1995 and 2015", yearValidate);
-  string strYear = to_string(yearMade).substr(2,3);
+  const int makeNum = getInp("What is the make of the car? Please enter 1, 2, 3 or 4 for \n\n1) Ford\n2) Nisan\n3) Volvo\n4) Jaguar", makeValidate);
+  const string carMake = getMake(makeNum);
+  const char carChar = carMake[0];
+  const int yearMade = getInp("What was the year of manufacture? Note that only models made between 1995 and 2015 are supported by this service\n\nPlease enter an integer between 1995 and 2015", yearValidate);
+  const string strYear = to_string(yearMade).substr(2,3);
 
-  string modelNum = carChar + strYear;
+  const string modelNum = carChar + strYear;
   cout << "Your car filter model number is: "<<modelNum;
   cout << "\nThank you for using our service\n\nGoodbye";
 }
